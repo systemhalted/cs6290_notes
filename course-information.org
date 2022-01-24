@@ -1,0 +1,109 @@
+** Are you ready for this course?
+   :PROPERTIES:
+   :CUSTOM_ID: are-you-ready-for-this-course
+   :END:
+Complete the prerequisite check at
+[[https://classroom.udacity.com/courses/ud219/][🔗HPC0]]
+
+** Textbook
+   :PROPERTIES:
+   :CUSTOM_ID: textbook
+   :END:
+There are no required readings. For personal knowledge, a recommended
+textbook is *Computer Architecture* by Hennessy and Patterson.
+[[https://ebookcentral-proquest-com.prx.library.gatech.edu/lib/gatech/detail.action?docID=787253][🔗This
+textbook is available electronically via the GT Library]].
+
+** Sample Tests
+   :PROPERTIES:
+   :CUSTOM_ID: sample-tests
+   :END:
+*** Sample Midterms
+    :PROPERTIES:
+    :CUSTOM_ID: sample-midterms
+    :END:
+
+- [[https://www.udacity.com/wiki/hpca/SampleMidterms/Midterm1][Midterm 1
+  (without solutions)]]
+- [[https://www.udacity.com/wiki/hpca/SampleMidterms/Midterm2][Midterm 2
+  (with solutions)]]
+
+*** Sample Finals
+    :PROPERTIES:
+    :CUSTOM_ID: sample-finals
+    :END:
+
+- [[https://www.udacity.com/wiki/hpca/sample-final/samplefinal1][Final 1
+  (without solutions)]]
+- [[https://www.udacity.com/wiki/hpca/sample-final/samplefinal2][Final 2
+  (with solutions)]]
+
+** Problem Set Solutions
+   :PROPERTIES:
+   :CUSTOM_ID: problem-set-solutions
+   :END:
+
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/MetricsAndEval][Metrics
+  and Evaluation Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Pipelining][Pipelining
+  Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Branches][Branches
+  Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Predication][Predication
+  Problem Set Solutions]] (links broken)
+
+  - [[https://www.udacity.com/wiki/hpca/problem-set-solutions/predication/problem-1][Problem
+    1]]
+  - [[https://www.udacity.com/wiki/hpca/problem-set-solutions/predication/problem-2][Problems
+    2-6]]
+  - [[https://www.udacity.com/wiki/hpca/problem-set-solutions/predication/problem-3][Problems
+    7-9]]
+  - [[https://www.udacity.com/wiki/hpca/problem-set-solutions/predication/problem-4][Problems
+    10-14]]
+  - [[https://www.udacity.com/wiki/hpca/problem-set-solutions/predication/problem-5][Problems
+    15-19]]
+
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/ILP][ILP
+  Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Instruction_Scheduling][Instruction
+  Scheduling Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/ROB][ReOrder
+  Buffer Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Interrupts_Exceptions][Interrupts
+  & Exceptions Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/VirtualMemory][Virtual
+  Memory Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Advanced_Caches][Advanced
+  Caches Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Memory][Memory
+  Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/Problem_Set_Solutions/Mulitprocessing][Multiprocessing
+  Problem Set Solutions]]
+- [[https://www.udacity.com/wiki/hpca/problem-set-solutions/memory-consistency][Memory
+  Consistency Problem Set Solutions]]
+
+** Additional Resources
+   :PROPERTIES:
+   :CUSTOM_ID: additional-resources
+   :END:
+
+- [[https://www.udacity.com/wiki/hpca/assemblyLanguageProgramming][Assembly
+  Language Programming]]
+- [[https://www.udacity.com/wiki/hpca/reviewLinuxCommands][Linux/Unix
+  Commands]]
+- [[https://www.udacity.com/wiki/hpca/reviewC++][C++]]
+- [[https://www.udacity.com/wiki/hpca/glossary/Glossary][Glossary]]
+
+** External Lectures and Materials
+   :PROPERTIES:
+   :CUSTOM_ID: external-lectures-and-materials
+   :END:
+These are some links I personally found helpful to explain some of the
+course concepts.
+
+- Branch Handling and Branch Prediction - CMU Computer Architecture
+  (Prof. Onur Mutlu)
+
+  - [[https://www.youtube.com/watch?v=06OAhsPL-1k][2014 Video]],
+    [[https://www.youtube.com/watch?v=XkerLktFtJg][2013 Video]],
+    [[http://course.ece.cmu.edu/~ece447/s13/lib/exe/fetch.php?media=onur-447-spring13-lecture11-branch-prediction-afterlecture.pdf][Slides]]

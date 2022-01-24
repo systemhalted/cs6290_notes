@@ -1,0 +1,5 @@
+* cs6290-notes
+  :PROPERTIES:
+  :CUSTOM_ID: cs6290-notes
+  :END:
+Notes for CS6290, High Performance Computer Architecture
