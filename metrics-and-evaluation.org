@@ -15,23 +15,21 @@ on Udacity (45 min)]]
     :END:
 "X is N times faster than Y"
 
-Speedup = N = speed(X)/speed(Y)\\
-\( \Rightarrow \) N = Throughput(X)/Throughput(Y)\\
-\( \Rightarrow \) N = Latency(Y)/Latency(X)\\
-(notice Y and X for each)
+Speedup: N = Speed(X) / Speed(Y) = Throughput(X) / Throughput(Y) = Latency(Y) / Latency(X)
+*Note the difference when using Latency
 
 *** Speedup
     :PROPERTIES:
     :CUSTOM_ID: speedup
     :END:
-Speedup > 1 \( \Rightarrow \) Improved Performance * Shorter execution
+Speedup > 1: Improved Performance * Shorter execution
 time * Higher throughput
 
-Speedup < 1 \( \Rightarrow \) Worse Performance
+Speedup < 1:  Worse Performance
 
-Performance ~ Throughput
+Performance ∝ Throughput
 
-Performance ~ 1/Latency
+Performance ∝ 1/Latency
 
 ** Measuring Performance
    :PROPERTIES:
@@ -61,6 +59,7 @@ each representative of some kind of application.
 
   - Most Representative
   - Most difficult to set up
+  - Used for real machine comparisons
 
 - Kernels
 
@@ -115,13 +114,18 @@ means for both average times and speedups. This results in the same
 value whether you are taking the geometric mean of individual speedups,
 or speedup of geometric mean of execution times.
 
-For example, in the table above we would obtain: | | Comp X | Comp Y |
-Speedup | |---|--------|--------|---------| | Geo Mean | 7.66s | 11.15s
-| 1.456 |
+For example, in the table above we would obtain:
+|                | Comp X              | Comp Y                | Speedup |
+|----------------+---------------------+-----------------------+---------|
+| App A          | 9s                  | 18s                   |     2.0 |
+| App B          | 10s                 | 7s                    |     0.7 |
+| App C          | 5s                  | 11s                   |     2.2 |
+| AVG            | 8s                  | 12s                   |     1.5 |
+| Geometric Mean | (9x10x5)^1/3 = 7.66 | (18x7x11)^1/3 = 11.15 | 11.15/7.66 = 1.456 ~ (2x0.7x2.2)^1/3 = 1.454 |
 
 Geometric mean of speedup values (2.0, 0.7, 2.2) also result in 1.456.
 
-\[ \text{geometric mean} = \sqrt[n]{a_1\*a_2\*...a_n} \]
+Geometric mean = (Product of the terms)^ (1/Number of terms)
 
 As a general rule, if you are trying to average things that are ratios
 (speedups are ratios), you cannot simply average them. Use the geometric
@@ -131,13 +135,15 @@ mean instead.
    :PROPERTIES:
    :CUSTOM_ID: iron-law-of-performance
    :END:
-*CPU Time* = (# instructions in the program) * (cycles per instruction)
-* (clock cycle time)
+*CPU Time* = (# instructions in the program) * (cycles per instruction) *  (clock cycle time)
 
-Each component allows us to think about the computer architecture and
-how it can be changed: * Instructions in the Program * Algorithm *
-Compiler * Instruction Set * Cycles Per Instruction * Instruction Set *
-Processor Design * Clock Cycle Time * Processor Design * Circuit Design
+All three aspects are important in decision making in computer architecture
+● # of Instructions in the Program: is effected by the algorithm, the compiler used, and/or the instruction set used.
+● Cycles per Instructions: is affected by the instruction set and/or the processor design
+● Clock cycle Time: is affected by processor design, circuit design, and/or transistor
+physics
+● Computer architects influence the instruction set and the processor design.
+
 * Transistor Physics
 
 *** Iron Law for Unequal Instruction Times
@@ -146,10 +152,8 @@ Processor Design * Clock Cycle Time * Processor Design * Circuit Design
     :END:
 When instructions have different number of cycles, sum them
 individually:
-\[ \sum_i (IC_i\* CPI_i) * \frac{\text{time}}{\text{cycle}} \]
 
-where \( IC_i \) is the instruction count for instruction \( i \), and
-\(CPI_i\) is the cycles for instruction \( i \).
+CPU Time = [Sum of(Inst/Program * cycles/Inst)] * Time/cycle
 
 ** Amdahl's Law
    :PROPERTIES:
@@ -158,11 +162,13 @@ where \( IC_i \) is the instruction count for instruction \( i \), and
 Used when only part of the program or certain instructions. What is the
 overall affect on speedup?
 
-\[ speedup = \frac{1}{(1-frac_{enh}) + \frac{frac_{enh}}{speedup_{enh}}} \]
+Speedup = 1/((1­Frac of Enhancement) + (Frac Enhancement/Speedup Enhancement))
 
-where \( frac_{enh} \) represents the fraction of the execution *TIME*
-enhanced by the changes, and \( speedup_{enh} \) represents the amount
+where =Frac of Enhancement= represents the fraction of the execution *TIME*
+enhanced by the changes, and =Speedup Enhancement= represents the amount
 that change was sped up.
+
+=Frac of Enhancement = % of original execution time that is affected by enhancement=.
 
 NOTE: Always ensure the fraction represents TIME, not any other quantity
 (cycles, etc.). First, convert changes into execution time before the
@@ -179,7 +185,7 @@ time * \( \Rightarrow \) speedup = 1.105 * Enhancement 2 * Speedup of
 Even an infinite speedup in enhancement 1 only yields 1.111 overall
 speedup.
 
-Takeaway: Make the common case fast
+~Takeaway: Make the common case fast~
 
 *** Lhadma's Law
     :PROPERTIES:

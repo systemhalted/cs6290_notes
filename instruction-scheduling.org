@@ -22,7 +22,7 @@ on Udacity (1.5 hr)]]
    :PROPERTIES:
    :CUSTOM_ID: tomasulos-algorithm
    :END:
-Originall used in IBM 360, determines which instructions have inputs
+Originally used in IBM 360, determines which instructions have inputs
 ready or not. Includes a form of Register Renaming, and is very similar
 to what is used today.
 
